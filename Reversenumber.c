@@ -1,16 +1,19 @@
 #include<stdio.h>
 void main()
 {
-    int x,r,reverse=0;
+    int x,a,b,reverse;
     printf("$$$$$$$$$$$$$$ C-Program for Reversing a number $$$$$$$$$$$$$$$$");
     printf("\n\nEnter Value that to be reversed: ");
     scanf("%d",&x);
-    while(x!=0)
-    {
-        r=x%10;
-        reverse=reverse*10+r;
-        x=x/10;
-    }
+    
+    a=x%10;
+    x=x/10;
+    b=x%10;
+    x=x/10;
+
+    reverse=a*100+b*10+x*1;
+
+
     printf("\nReversed number: %d",reverse);
 
 }
